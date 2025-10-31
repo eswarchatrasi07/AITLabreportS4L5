@@ -1,0 +1,24 @@
+facts = [
+    "john-is-cold.",
+    "raining.",
+    "john-Forgot-His-Raincoat.",
+    "fred-lost-his-car-keys.",
+    "peter-footballer."
+]
+
+def verify_fact(fact):
+    fact = fact.rstrip(".")
+    if fact == "john-Forgot-His-Raincoat":
+        return True
+    elif fact == "foggy":
+        return True
+    elif fact == "doggy":
+        return False
+    else:
+        return False
+
+for fact in facts:
+    if verify_fact(fact):
+        print(f"{fact} - Yes")
+    else:
+        print(f"{fact} - No")
